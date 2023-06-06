@@ -1,6 +1,6 @@
 @extends('layouts.master')
 @section('title')
-fssm
+Stages | Acceuil
 @endsection
 @section('css')
 @endsection
@@ -14,7 +14,7 @@ fssm
  @endsection 
 
  @section('content')
- <!-- Main content -->
+ {{-- <!-- Main content -->
  <section class="content">
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
@@ -596,9 +596,10 @@ fssm
         <!-- /.row (main row) -->
       </div><!-- /.container-fluid -->
     </section>
-    <!-- /.content -->
- @endsection
+    <!-- /.content --> --}}
 
+
+
+@endsection 
  @section('scripts')
  @endsection
-

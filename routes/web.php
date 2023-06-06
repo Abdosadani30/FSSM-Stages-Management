@@ -1,6 +1,8 @@
 <?php
 
+// use ;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,9 +15,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/home', function () {
+//      return view('welcome');
+// });
 Route::get('/tables', function () {
     return view('tables');
 });
+
+Route::get('/', [App\Http\Controllers\StageController::class, 'index'])
+    ->name('Stages.add');
+
+Route::post('/Stages/store', [App\Http\Controllers\StageController::class, 'store'])
+    ->name('Stages.store');
+
+Auth::routes();

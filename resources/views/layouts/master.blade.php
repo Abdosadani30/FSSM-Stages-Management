@@ -12,20 +12,27 @@
   <div class="preloader flex-column justify-content-center align-items-center">
     <img class="animation__shake" src=" {{ URL::asset('assets/img/AdminLTELogo.png') }}" alt="AdminLTELogo" height="60" width="60">
     
-  </div>
+</div>
 
   @include('layouts.main-headerbar');
-  @include('layouts.main-sidebar')
 
+  @include('layouts.main-sidebar')
     
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
+            @if (session('succcess'))
+        <div class="alert alert-success">
+           
+              {{ session('succcess') }}
+        </div>
+            @endif
+        
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">@yield('title')</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
